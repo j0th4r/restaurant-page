@@ -1,13 +1,14 @@
 import "./styles.css";
 import home from "./homePage.js";
 import menu from "./menuPage.js";
-import menuBackground from "./images/menu-bg.png"
-import contactBackground from "./images/contact-bg.png"
+import menuBackground from "./images/menu-bg.png";
+import contactBackground from "./images/contact-bg.png";
 
 const content = document.getElementById("content");
 const body = document.querySelector("body");
-content.appendChild(home);
-
+// content.appendChild(home);
+body.style.backgroundImage = `url(${contactBackground})`;
+body.style.backgroundPosition = "left";
 
 const homeBtn = document.getElementById("home");
 homeBtn.addEventListener("click", () => {
