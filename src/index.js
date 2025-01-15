@@ -1,7 +1,8 @@
 import "./styles.css";
 import home from "./homePage.js";
 import menu from "./menuPage.js";
-import Menu from "./images/menu-bg.png"
+import menuBackground from "./images/menu-bg.png"
+import contactBackground from "./images/contact-bg.png"
 
 const content = document.getElementById("content");
 const body = document.querySelector("body");
@@ -24,7 +25,7 @@ menuBtn.addEventListener("click", () => {
   if (content.contains(menu)) {
     return;
   } else {
-    body.style.backgroundImage = `url(${Menu})`;
+    body.style.backgroundImage = `url(${menuBackground})`;
     body.style.backgroundPosition = "left";
     content.replaceChild(menu, home);
   }
@@ -33,7 +34,8 @@ menuBtn.addEventListener("click", () => {
 
 const aboutBtn = document.getElementById("about");
 aboutBtn.addEventListener("click", () => {
-  content.removeChild(home);
+  body.style.backgroundImage = `url(${contactBackground})`;
+  body.style.backgroundPosition = "left";
 })
 
 
