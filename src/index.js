@@ -3,23 +3,32 @@ import home from "./homePage.js";
 import menu from "./menuPage.js";
 import Menu from "./images/menu-bg.png"
 
-const menuBg = new Image();
-menuBg.src = Menu;
-
 const content = document.getElementById("content");
 const body = document.querySelector("body");
-body.style.backgroundImage = `url(${menuBg.src})`;
-body.style.backgroundPosition = "left";
+content.appendChild(home);
+
 
 const homeBtn = document.getElementById("home");
 homeBtn.addEventListener("click", () => {
-  content.appendChild(home);
+  if (content.contains(home)){
+    return;
+  } else {
+    body.style.backgroundImage = "";
+    body.style.backgroundPosition = "center";
+    content.replaceChild(home, menu);
+  }
 })
 
 const menuBtn = document.getElementById("menu");
 menuBtn.addEventListener("click", () => {
-  document.querySelector("body").style.backgroundImage = ""
-  content.replaceChild(home, menu);
+  if (content.contains(menu)) {
+    return;
+  } else {
+    body.style.backgroundImage = `url(${Menu})`;
+    body.style.backgroundPosition = "left";
+    content.replaceChild(menu, home);
+  }
+  
 })
 
 const aboutBtn = document.getElementById("about");
