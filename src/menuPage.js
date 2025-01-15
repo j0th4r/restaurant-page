@@ -161,9 +161,4 @@ p4.textContent = "Lorem ipsum dolor sit amet, consectetur"
 desc4.appendChild(p4);
 
 
-
-
-
-
-
 export default menuPage;

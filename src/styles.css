@@ -59,11 +59,21 @@ header > h1 {
   left: 1.25rem;
 }
 
+#home {
+  color: #e48c0a;
+}
+
 nav button {
   font-family: "Chillax-Medium";
   font-size: 1.125rem;
   background-color: white;
   border: 1px solid white;
+  cursor: pointer;
+}
+
+nav button:hover {
+  font-family: "Grotesk";
+  color: #e48c0a;
 }
 
 nav {
